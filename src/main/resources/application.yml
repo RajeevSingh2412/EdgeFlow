@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+edgeflow:
+  mock:
+    enabled: true
+  routes:
+    - path-prefix: /api/users
+      upstream: http://localhost:8080/mock/users
+    - path-prefix: /api/orders
+      upstream: http://localhost:8080/mock/orders
+    - path-prefix: /api/payments
+      upstream: http://localhost:8080/mock/payments
