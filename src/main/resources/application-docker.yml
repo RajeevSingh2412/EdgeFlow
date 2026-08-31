@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/edgeflow
+    driver-class-name: org.postgresql.Driver
+    username: edgeflow
+    password: edgeflow
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  h2:
+    console:
+      enabled: false
+  flyway:
+    locations: classpath:db/migration
+  kafka:
+    bootstrap-servers: kafka:9092
+  autoconfigure:
+    exclude: []
+
+edgeflow:
+  mock:
+    enabled: false
+  kafka:
+    enabled: true
